@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100vh;
+  background-color: #fff;
+  margin: 0;
+  overflow: hidden;
+  user-select: text;
+}
+
+.contentWrap {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.refreshWrap {
+  height: calc(100vh - 80px);
+  overflow: scroll;
+}
+
+.middleArea {
+  height: 100px;
+  color: gray;
+  font-size: 20px;
+  border: 1px solid #000;
+}
+
+.homeHeader {
+  height: 80px;
+  background-color: lightblue;
+  color: gray;
+  font-size: 20px;
+}
+
+.pullDownContent {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.25);
+  margin: auto;
+  transition: height 0.3s ease-out; /* 平滑过渡效果 */
+  overflow: hidden;
+}
+
+.loadingFlex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .loadingRing {
+    width: 14px;
+    height: 14px;
+    border: 2.5px rgba(0, 0, 0, 0.07) solid;
+    border-top: 2.5px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 50%;
+    animation: spin 0.6s infinite linear;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loadingText {
+    text-align: center;
+    font-size: 12px;
+    margin-left: 5px;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .flexCenter {
+    display: flex;
+    justify-content: center;
+  }
+}
+.loadingHidden {
+  animation: shrinkHeight 1s forwards;
+}
+
+@keyframes shrinkHeight {
+  100% {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
