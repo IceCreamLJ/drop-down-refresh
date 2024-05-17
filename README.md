@@ -1,2 +1,2 @@
-# anchor-sticky-nav
-滑动高亮、吸顶和锚点跳转的H5导航栏
+# drop-down-refresh
+滑动触发、高度提示与数据刷新的下拉刷新
